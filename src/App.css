@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+
+/* NAVBAR CSS STARTS HERE */
+.navbar-main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  top: 10px;
+}
+
+.logo-div img {
+  height: 80px;
+}
+
+.navbar-h5 {
+  margin-left: 20px;
+}
+
+.navlink {
+  margin-left: auto;
+  display: flex;
+  gap: 50px;
+}
+
+.navlink a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  /* Remove default underline */
+  border-bottom: 2px solid transparent;
+  /* Invisible bottom border by default */
+  margin-right: 20px;
+}
+
+.navlink a:hover,
+.navlink a.active {
+  cursor: pointer;
+  border-bottom: 10px solid #005B97;
+  /* Show a blue border as underline on hover and when active */
+}
+
+
+
+
+/* Toggle Button for Small Screens */
+.navbar-toggle {
+  display: none;
+  /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  /* Adjust position for the button */
+}
+
+
+
+/*/* Style the tab */
+.services h1,.chooseus-h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  /* Center the heading */
+  font-family: 'Jacques Francois Shadow'
+}
+
+.services h1::before{
+  content: attr(data-text);
+  position: absolute;
+
+ color: #005B97;
+ 
+ border-right:2px solid #0056b3 ;
+ overflow: hidden;
+ animation: animate 6s linear infinite;
+}
+
+@keyframes animate 
+{
+  0%,10%,10%{
+    width: 0;
+  }
+  10%{
+    width: 15%;
+  }
+  
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+
+  .services h1::before {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  
+
+  .services h1::before {
+    width: 27%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .services h1::before {
+    width: 51%;
+  }
+}
+
+
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Horizontally center the content */
+  justify-content: center;
+  /* Vertically center the content */
+
+  text-align: center;
+  /* Center text */
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.tab-btn.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #005B97;
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Allow the tab panes to wrap if needed */
+  margin-top: 2rem;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: flex;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.car-image {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background: #005B97;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+#local {
+  /* Use Flexbox to arrange cards in a row */
+  justify-content: center;
+  /* Center the cards horizontally */
+  gap: 1rem;
+  /* Optional: adds space between the cards */
+}
+
+.card {
+  width: 250px;
+  /* Define a width for the cards */
+  text-align: center;
+  /* Keep text inside the cards centered */
+  box-sizing: border-box;
+  /* Ensures padding/margin doesn't affect the width */
+}
+
+
+
+.tab-pane {
+  display: none; /* Ensure inactive tabs are hidden */
+  outline: none !important;
+}
+
+.tab-pane.active {
+  display: flex !important;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+ /* WHY CHOOSE CSS STARTS HERE */
+
+ 
+
+
+.why-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equally spaced columns */
+  grid-template-rows: auto auto auto; /* 3 rows */
+
+ 
+  width: 50%;
+}
+
+
+/* Card Styles */
+.whycard {
+  top: 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  width: 100%;
+ /* Ensures square boxes */
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+  transform: scale(1.6);
+
+ 
+}
+
+.whycard:hover {
+  transform: scale(2.0) !important;
+}
+
+.whycard img {
+  width: 80%;
+  height: auto;
+}
+.why-choose-para p{
+  font-size: 50px;
+  font-family: Jacques Francois;
+  color: #005B97;
+  font-weight: bold;
+}
+.why-choose{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+  
+  /* Set shapebg.png as the background */
+  background-image: url('assets/shapebg.png');
+  background-size: cover; /* Ensure the background covers the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+ /* Ensure the section takes up the full width of the page */
+  padding: 50px 0; /* Optional padding to space out content */
+}
+
+
+
+/* Empty Spaces */
+.empty {
+  visibility: hidden; /* Hide empty grid items */
+}
+
+/* Grid Positioning */
+.safe-for-women {
+  grid-column: 1; /* First column in the first row */
+  grid-row: 1;
+}
+
+.tailored-care {
+  grid-column: 3; /* Third column in the first row */
+  grid-row: 1;
+}
+
+.always-on-time {
+  grid-column: 2; /* Second column in the second row */
+  grid-row: 2;
+}
+
+.competitive-rates {
+  grid-column: 1; /* First column in the third row */
+  grid-row: 3;
+}
+
+.drivers-professional {
+  grid-column: 3; /* Third column in the third row */
+  grid-row: 3;
+}
+
+
+ /* FOOTER CSS STARTS HERE */
+ .footer-main {
+  margin-top: 50px;
+}
+
+.footerbg {
+  background-color: #005bac; /* Adjust to match the blue shade */
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.footer-left p,
+.footer-right p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 80px;
+  background-color: white;
+}
+
+.footer-right i {
+  margin-right: 10px;
+}
+
+.footerbg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/footerbg.png"); /* Add your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Adjust for the hexagonal patterns */
+  z-index: 0;
+}
+
+.footer-content {
+  z-index: 1; /* Ensure content appears above the background */
+}
+
+
+
+/* SERVICE PAGE CSS STARTS HERE */
+
+
+.vehicles-section {
+  padding: 20px;
+  text-align: center;
+}
+
+
+ .vehicles-section h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #005B97;
+} 
+
+
+
+.vehicles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.vehicle-card {
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  animation: shake 3s infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+.vehicle-card h3 {
+  font-size: 1.2rem;
+  color: #005B97;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.vehicle-card button {
+  background-color: #005B97;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vehicle-card button:hover {
+  background-color: #005B97;
+}
+.service-video-div {
+  margin-top: 30px;
+}
+.service-video-div video {
+  display: block;
+  position: static; /* Ensure the video remains in normal document flow */
+
+ 
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vehicles-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .vehicle-card {
+    padding: 10px;
+  }
+
+  .vehicle-card h3 {
+    font-size: 1rem;
+  }
+
+  .vehicle-card button {
+    font-size: 0.8rem;
+  }
+}
+ /* why process imges */
+ .chooseus-h1{
+  margin-top: 50px;
+}
+ .why-process-img{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+ }
+
+ .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+}
+
+.icon {
+  background-color: #005B97;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+}
+.line {
+  flex: 1;
+  height: 0; /* Set height to 0 for border styling */
+  border-top: 4px dashed #005B97; /* Dashed line */
+  margin: 0 0px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .icon-container {
+    width: 90%;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .icon img {
+
+    height: 41px;
+  }
+}
+
+
+/* CONTACT CSS STARTS HERE */
+
+
+.contact-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.contact-image-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-image-container img {
+  margin-top: 50px;
+  width: 165%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form-container {
+  flex: 1;
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: #fff;
+  border-radius: 0 50% 50% 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+  color: #005B97;
+}
+
+form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #005B97;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1b4b6b;
+}
+
+
+
+
+/* SCROLL TO TOP CSS STARTS HERE */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #005bac;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  width: 50px;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+.scroll-to-top:focus {
+  outline: none;
+}
+
+/* Show the button when it's visible */
+.scroll-to-top {
+  display: block;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.active{
+
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+ @media (max-width:1024px) {
+  .why-choose-para p{
+    font-size: 32px;
+  }
+  
+ }
+@media (max-width: 768px) {
+    .container{
+        grid-template-columns: auto;
+    }
+
+  .empty {
+    display: none; /* Hide empty cells on smaller screens */
+  }
+  .seniorimg{
+    margin-left: 32px;
+  }
+  
+  .newtime{
+    margin-left: 20px;
+  }
+  
+  .why-choose-para p {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+    .container{
+      display: unset;
+    }
+
+
+  .whycard {
+    grid-column: span 1;
+  }
+  .why-choose-para p{
+    font-size: unset;
+  }
+  /* .why-container {
+    width: 105%;
+    margin-left: 40vw;
+  } */
+  .seniorimg{
+    margin-left: 32px;
+  }
+  .rateimg{
+    margin-left: 30px;
+  }
+  .womenimg ,.professionalimg{
+    margin-left: -40px !important;
+  }
+  .timeimg{
+  
+    margin-left: 26px   
+  }
+  .professionalimg ,.rateimg{
+    top: 66px !important;
+  }
+  .womenimg ,.seniorimg{
+    margin-bottom: 20px;
+  }
+  .footerbg {
+    height: unset;
+  }
+  .footer-content{
+    display: unset;
+  }
+  .footer-divider{
+    height: unset;
+    width: unset;
+  }
+  .why-choose{
+    padding: unset;
+    padding-bottom: 50px;
+  }
+  .line{
+    flex: 1;
+    height: 0; /* Set height to 0 for border styling */
+    border-top: 4px dashed #005B97; /* Dashed line */
+    margin-bottom: 20px !important;
+    margin: 0 -45px;
+  }
+  .why-process-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    margin-left: 10px;
+}
+.chooseus-h1{
+  font-size: 30px;
+}
+.icon-text{
+  font-size: small;
+}
+.icon-block{
+  margin-right: -15px;
+}
+.contact-form-container::before{
+  content: unset;
+}
+.contact-form-container{
+  padding: 10px;
+}
+}
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .navlink {
+    display: none;
+    /* Hide links by default */
+    flex-direction: column;
+    gap: unset;
+    position: absolute;
+    top: 60px;
+    /* Position below the toggle button */
+    right: 0;
+    /* Align to the right */
+    background-color: rgba(255, 255, 255, 0.685);
+    padding: 10px 0;
+    color: #005B97;
+    border-top-left-radius: 10px;
+    /* Adjust as needed */
+    border-bottom-left-radius: 10px;
+    /* Adjust as needed */
+  }
+
+  .navbar-toggle {
+    display: block;
+    /* Show the toggle button on small screens */
+  }
+
+  .navlink.show {
+    display: flex;
+    /* Show the links when the "show" class is added */
+  }
+
+  .navlink a {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .navlink a:hover {
+    cursor: pointer;
+    border-bottom: 5px solid #005B97;
+    /* Show a blue border as underline on hover */
+    color: #005B97;
+
+  }
+}
+
+@media (max-width:425px) {
+  .navbar-h5 {
+    font-size: 15px;
+  }
+
+}
+
+/* HOME CSS STARTS HERE */
+.home-video-div video {
+  width: 100%;
+  /* Make it responsive */
+
+}
